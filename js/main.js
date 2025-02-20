@@ -3,7 +3,8 @@
     window.onscroll = () => {
         if (window.pageYOffset > 50) {
             header.classList.add('header__active');
-            console.log('ti pidor');
-        };
+        } else {
+            header.classList.remove('header__active');
+        }
     };
 }());

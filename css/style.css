@@ -76,11 +76,15 @@ img{
 
 /* header styles start*/
 
-header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.header__active{
+  background: #0E1D28;
 }
 
 .header__wrapper{
@@ -124,6 +128,7 @@ header {
   background: url(../img/intro-bg.jpg) no-repeat center;
   background-size: cover;
   padding-top: 263px;
+  padding-bottom: 223px;
 }
 
 .intro__title{
@@ -265,6 +270,10 @@ header {
 
 /*places styles start*/
 
+.places{
+  margin-bottom: 131px;
+}
+
 .places__title{
   margin-right: 15px;
 }
@@ -297,6 +306,7 @@ header {
 
 .places__card{
   position: relative;
+  overflow: hidden;
 }
 
 .places__card::after{
@@ -309,6 +319,10 @@ header {
   top: 0;
   left: 0;
   z-index: 2;
+}
+
+.places__card:hover .places__card-pic{
+  transform: scale(1.05);
 }
 
 .places__card-title{
@@ -325,10 +339,166 @@ header {
   grid-column: span 3;
 }
 
+.places__card_size_sm{
+  grid-column: span 2;
+}
+
 .places__card-pic{
   width: 100%;
+  transition: .15s;
+}
+
+.places__card-pic_size_lg{
   height: 354px;
   object-fit: cover;
 }
 
+.places__card-pic_size_sm{
+  height: 283px;
+  object-fit: cover;
+}
+
+.places__card-link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
 /*places styles end*/
+
+/*toors styles start*/
+
+.tours{
+  margin-bottom: 139px;
+}
+
+.tours__tour{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 108px;
+  align-items: center;
+  margin-bottom: 77px;
+}
+
+.tour__info{
+  padding-left: 47px;
+}
+
+.tour__title{
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 85px;
+}
+
+.tour__desk{
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 58px;
+}
+
+.tour__more{
+  font-size: 16px;
+  color: #006DFE;
+  text-decoration: none;
+  padding-right: 59px;
+  background: url(../img/arrow.svg) no-repeat 100% center;
+}
+
+.tour__more:hover, .tour__more:focus{
+  opacity: 0.65;
+}
+
+/*toors styles end*/
+
+/*top styles start*/
+
+.top{
+  margin-bottom: 86px;
+}
+
+.top__title{
+  margin-bottom: 54px;
+}
+
+.top__cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 57px;
+}
+
+.top__card-pic{
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.top__card{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.top__card-stats{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(21, 24, 36, 0.6);
+  padding: 16px 25px;
+}
+
+.top__card-title{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  margin: 0 auto 0 0;
+}
+
+.top__card-likes{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  padding-right: 20px;
+  background: url(../img/heart-icon.svg) no-repeat right;
+  margin-right: 14px;
+}
+
+.top__card-comments{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  padding-right: 23px;
+  background: url(../img/comment-icon.svg) no-repeat right;
+}
+
+.top__card-desk{
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 31px;
+}
+
+.top__card-more{
+  width: 118px;
+  padding: 12px 19px;
+  background: #006DFE;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  margin: auto 0 0 0;
+}
+
+.top__card-more:hover, .top__card-more:focus, .top__card-more:active{
+  background-color: #1b78f5;
+}
+
+/*top styles end*/

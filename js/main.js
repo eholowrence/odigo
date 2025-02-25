@@ -14,6 +14,7 @@
 (function () {
     const burgerItem = document.querySelector('.ham');
     const menu = document.querySelector('.header__nav');
+    const menuLinks = document.querySelectorAll('.header__link');
     burgerItem.addEventListener('click', () => {
         if (burgerItem.classList.contains('active')) {
             menu.classList.remove('header__nav-active');
@@ -23,6 +24,14 @@
             burgerItem.classList.add('active');
         };
     });
+    if (window.innerWidth <= 767) {
+        for (let i = 0; i < menuLinks.length; i += 1) {
+            menuLinks[i].addEventListener('click', () => {
+                menu.classList.remove('header__nav-active');
+                burgerItem.classList.remove('active');
+            });
+        };
+    };
 
 }());
     
